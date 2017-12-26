@@ -14,13 +14,20 @@ module.exports = function(directoryPath, extension, callback) {
     return callback(new Error('No arguments!'));
   }
 
-  fs.stat(directoryPath, (err, stats) => {
+  // PASS
+  fs.readdir(directoryPath, 'utf-8', (err, files) => {
     if (err) return callback(err);
-    if (stats.isDirectory()) {
-      fs.readdir(directoryPath, 'utf-8', (err, files) => {
-        if (err) return callback(err);
-        callback(null, files.filter(el => el.endsWith(`.${extension}`)));
-      });
-    }
+    callback(null, files.filter(el => el.endsWith(`.${extension}`)));
   });
+
+  //NOT PASS - BUT CORRECT TOO
+  // fs.stat(directoryPath, (err, stats) => {
+  //   if (err) return callback(err);
+  //   if (stats.isDirectory()) {
+  //     fs.readdir(directoryPath, 'utf-8', (err, files) => {
+  //       if (err) return callback(err);
+  //       callback(null, files.filter(el => el.endsWith(`.${extension}`)));
+  //     });
+  //   }
+  // });
 };
