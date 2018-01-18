@@ -1,0 +1,22 @@
+{
+  "name": "learnyounodesolution",
+  "version": "1.0.0",
+  "description": "My solutions of 'learyounode'",
+  "main": "-",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IlyaLoshchinin/learnyounodeSolution.git"
+  },
+  "author": "Illia Loshchinin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IlyaLoshchinin/learnyounodeSolution/issues"
+  },
+  "homepage": "https://github.com/IlyaLoshchinin/learnyounodeSolution#readme",
+  "dependencies": {
+    "bl": "^1.2.1"
+  }
+}
